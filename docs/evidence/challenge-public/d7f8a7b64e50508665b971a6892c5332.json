@@ -1,0 +1,71 @@
+{
+  "id": "d7f8a7b64e50508665b971a6892c5332",
+  "status": "complete",
+  "created_at": "2026-10-03T13:10:00.00572381Z",
+  "finished_at": "2026-10-03T13:10:17.606481128Z",
+  "deadline": "2026-10-03T13:12:12.43251795Z",
+  "choice": "retry",
+  "scenario": "lost_confirmation",
+  "recipient": "Rowan",
+  "amount": "1.0000000",
+  "result": {
+    "id": "player",
+    "status": "complete",
+    "source": "GAL7AAD47NO3CFO3XCAM5G5OJMC7QLV6E6M4JRBWTPL5JWJVFHI3UB4O",
+    "destination": "GCLZT3WTCBA3XYXZZZ2CTMJ4S5HH5DKGL5GM2OR2QHNYCR2OT2QY7TP6",
+    "session_id": "094943a8b3256c5d136304ef8a5ee9ed",
+    "attempts": 2,
+    "settlements": 2,
+    "received": "2.0000000",
+    "verdict": "Rowan received two payments",
+    "events": [
+      {
+        "at": "2026-10-03T13:10:08.665402135Z",
+        "kind": "prepared",
+        "message": "Built one 1 XLM payout. Retained its original signed envelope and hash.",
+        "hash": "b4f54fa96773d2001406798e51c5a99e3e4e4574d6913f6ebc51e3bf64fa0ad9"
+      },
+      {
+        "at": "2026-10-03T13:10:12.415949399Z",
+        "kind": "uncertain",
+        "message": "The connection returned an error. The client cannot tell whether the payout settled.",
+        "hash": "b4f54fa96773d2001406798e51c5a99e3e4e4574d6913f6ebc51e3bf64fa0ad9"
+      },
+      {
+        "at": "2026-10-03T13:10:12.953632916Z",
+        "kind": "decision",
+        "message": "You chose to send a fresh payment.",
+        "hash": "b4f54fa96773d2001406798e51c5a99e3e4e4574d6913f6ebc51e3bf64fa0ad9"
+      },
+      {
+        "at": "2026-10-03T13:10:12.969118221Z",
+        "kind": "retry",
+        "message": "Naive recovery builds a fresh payment instead of reconciling the original."
+      },
+      {
+        "at": "2026-10-03T13:10:17.374927133Z",
+        "kind": "confirmed",
+        "message": "Fresh payment confirmed. Ledger verification checks whether both settled.",
+        "hash": "d484df5055947188762da5798743e6a4cf2c199ee3ec627d077e1ddfc5e5144b"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "b4f54fa96773d2001406798e51c5a99e3e4e4574d6913f6ebc51e3bf64fa0ad9",
+        "confirmed": true,
+        "successful": true,
+        "ledger": 5001885,
+        "explorer": "https://stellar.expert/explorer/testnet/tx/b4f54fa96773d2001406798e51c5a99e3e4e4574d6913f6ebc51e3bf64fa0ad9",
+        "amount": "1.0000000"
+      },
+      {
+        "hash": "d484df5055947188762da5798743e6a4cf2c199ee3ec627d077e1ddfc5e5144b",
+        "confirmed": true,
+        "successful": true,
+        "ledger": 5001886,
+        "explorer": "https://stellar.expert/explorer/testnet/tx/d484df5055947188762da5798743e6a4cf2c199ee3ec627d077e1ddfc5e5144b",
+        "amount": "1.0000000"
+      }
+    ]
+  }
+}

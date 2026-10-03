@@ -1,0 +1,13 @@
+{
+  "url": "https://ld.kennyy.tech",
+  "errors": [],
+  "records": [
+    {
+      "id": "d7f8a7b64e50508665b971a6892c5332",
+      "scenario": "lost_confirmation",
+      "settlements": 2
+    }
+  ],
+  "legacyNavigation": true,
+  "overflow": false
+}

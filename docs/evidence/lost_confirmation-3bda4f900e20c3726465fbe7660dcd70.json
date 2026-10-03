@@ -1,0 +1,107 @@
+{
+  "id": "3bda4f900e20c3726465fbe7660dcd70",
+  "scenario": "lost_confirmation",
+  "status": "complete",
+  "created_at": "2026-10-03T12:13:58.199694211Z",
+  "finished_at": "2026-10-03T12:14:27.804416564Z",
+  "network": "Stellar testnet",
+  "asset": "XLM",
+  "amount": "1.0000000",
+  "clients": [
+    {
+      "id": "naive",
+      "status": "complete",
+      "source": "GA35Y5R7F2WBXA3CBBZKCB64CNYNJNYOC4F6DIW2RDOT2MUABYU465NH",
+      "destination": "GBEMINW2TCOGMLTSY2QWOGJVE2YRPKMTOS4YYVPPF2GUL2EVWQQXZSDH",
+      "session_id": "d0309b6d446cec896b4adc81db58e12e",
+      "attempts": 2,
+      "settlements": 2,
+      "received": "2.0000000",
+      "verdict": "Duplicate payment confirmed",
+      "events": [
+        {
+          "at": "2026-10-03T12:14:13.722663303Z",
+          "kind": "prepared",
+          "message": "Built one 1 XLM payment; retained its envelope and hash.",
+          "hash": "78871b3e524227a8ccb178a022dd46d1fe39d43c23018c6ca32a8729da1c1787"
+        },
+        {
+          "at": "2026-10-03T12:14:17.375782372Z",
+          "kind": "uncertain",
+          "message": "Submission returned HTTP 504. Outcome needs reconciliation.",
+          "hash": "78871b3e524227a8ccb178a022dd46d1fe39d43c23018c6ca32a8729da1c1787"
+        },
+        {
+          "at": "2026-10-03T12:14:17.387252282Z",
+          "kind": "retry",
+          "message": "Naive recovery builds a fresh payment instead of reconciling the original."
+        },
+        {
+          "at": "2026-10-03T12:14:22.548412352Z",
+          "kind": "confirmed",
+          "message": "Fresh payment confirmed. Ledger verification checks whether both settled.",
+          "hash": "afae2337e721753fc7d9401e16b411fed3438c7607871dda4b18061446278016"
+        }
+      ],
+      "transactions": [
+        {
+          "hash": "78871b3e524227a8ccb178a022dd46d1fe39d43c23018c6ca32a8729da1c1787",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001214,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/78871b3e524227a8ccb178a022dd46d1fe39d43c23018c6ca32a8729da1c1787",
+          "amount": "1.0000000"
+        },
+        {
+          "hash": "afae2337e721753fc7d9401e16b411fed3438c7607871dda4b18061446278016",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001215,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/afae2337e721753fc7d9401e16b411fed3438c7607871dda4b18061446278016",
+          "amount": "1.0000000"
+        }
+      ]
+    },
+    {
+      "id": "reconciled",
+      "status": "complete",
+      "source": "GC42QP4YM3BTKDXNRL5I3MND7WDYIEI7OZHWZVUPKUU5S2S2ZBFUHF4W",
+      "destination": "GBEMINW2TCOGMLTSY2QWOGJVE2YRPKMTOS4YYVPPF2GUL2EVWQQXZSDH",
+      "session_id": "03897ce823ad41264d9973d9d07e417e",
+      "attempts": 1,
+      "settlements": 1,
+      "received": "1.0000000",
+      "verdict": "One payment confirmed",
+      "events": [
+        {
+          "at": "2026-10-03T12:14:22.913441871Z",
+          "kind": "prepared",
+          "message": "Built one 1 XLM payment; retained its envelope and hash.",
+          "hash": "3333173ead1e60fafc8b6f9c37a6a9ac16747f964161ddb3e910e0e964de81a0"
+        },
+        {
+          "at": "2026-10-03T12:14:27.537410163Z",
+          "kind": "uncertain",
+          "message": "Submission returned HTTP 504. Outcome needs reconciliation.",
+          "hash": "3333173ead1e60fafc8b6f9c37a6a9ac16747f964161ddb3e910e0e964de81a0"
+        },
+        {
+          "at": "2026-10-03T12:14:27.658711975Z",
+          "kind": "recovered",
+          "message": "Found the original successful transaction. No fresh payment created.",
+          "hash": "3333173ead1e60fafc8b6f9c37a6a9ac16747f964161ddb3e910e0e964de81a0"
+        }
+      ],
+      "transactions": [
+        {
+          "hash": "3333173ead1e60fafc8b6f9c37a6a9ac16747f964161ddb3e910e0e964de81a0",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001216,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/3333173ead1e60fafc8b6f9c37a6a9ac16747f964161ddb3e910e0e964de81a0",
+          "amount": "1.0000000"
+        }
+      ]
+    }
+  ]
+}

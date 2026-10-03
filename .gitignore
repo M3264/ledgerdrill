@@ -1,0 +1,11 @@
+/ledgerdrill
+/data/
+.env
+/frontend/node_modules/
+/frontend/.svelte-kit/
+/web/build/*
+!/web/build/.gitkeep
+*.db
+*.db-wal
+*.db-shm
+.impeccable/config.local.json

@@ -1,0 +1,125 @@
+{
+  "id": "9ceb92cc081d7c0c959ee0f92d9da21c",
+  "scenario": "delayed_lookup",
+  "status": "complete",
+  "created_at": "2026-10-03T13:04:53.871376793Z",
+  "finished_at": "2026-10-03T13:05:25.61919567Z",
+  "network": "Stellar testnet",
+  "asset": "XLM",
+  "amount": "1.0000000",
+  "clients": [
+    {
+      "id": "naive",
+      "status": "complete",
+      "source": "GCYBCZWICQBZJUF4TMLQEONXBXPKNNCQWNJB2N66YJM2N5BPRBOIBQTF",
+      "destination": "GBC7YKCGT7D4KZCJRZ34OSXVD26GCG5NCMXFNUKSGMQ5ZNNLU2KQJ65T",
+      "session_id": "8bc6146f68cecf18d0eef8dffc090c15",
+      "attempts": 2,
+      "settlements": 2,
+      "received": "2.0000000",
+      "verdict": "Duplicate payment confirmed",
+      "events": [
+        {
+          "at": "2026-10-03T13:05:09.178425985Z",
+          "kind": "prepared",
+          "message": "Built one 1 XLM payment; retained its envelope and hash.",
+          "hash": "d197b04fc5d4b9a049fce9e5724c6e102555a4efcca3d703f850fcc953171ea2"
+        },
+        {
+          "at": "2026-10-03T13:05:12.54118589Z",
+          "kind": "uncertain",
+          "message": "Submission returned HTTP 504. Outcome needs reconciliation.",
+          "hash": "d197b04fc5d4b9a049fce9e5724c6e102555a4efcca3d703f850fcc953171ea2"
+        },
+        {
+          "at": "2026-10-03T13:05:12.567398398Z",
+          "kind": "lookup",
+          "message": "Single lookup returned HTTP 404; naive client treats that as unpaid.",
+          "hash": "d197b04fc5d4b9a049fce9e5724c6e102555a4efcca3d703f850fcc953171ea2"
+        },
+        {
+          "at": "2026-10-03T13:05:12.580960155Z",
+          "kind": "retry",
+          "message": "Naive recovery builds a fresh payment instead of reconciling the original."
+        },
+        {
+          "at": "2026-10-03T13:05:17.601956487Z",
+          "kind": "confirmed",
+          "message": "Fresh payment confirmed. Ledger verification checks whether both settled.",
+          "hash": "87bf08ec9569e82a2daf4c6391ef860f06c71828bf20dde819f4aaa90355de18"
+        }
+      ],
+      "transactions": [
+        {
+          "hash": "d197b04fc5d4b9a049fce9e5724c6e102555a4efcca3d703f850fcc953171ea2",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001825,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/d197b04fc5d4b9a049fce9e5724c6e102555a4efcca3d703f850fcc953171ea2",
+          "amount": "1.0000000"
+        },
+        {
+          "hash": "87bf08ec9569e82a2daf4c6391ef860f06c71828bf20dde819f4aaa90355de18",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001826,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/87bf08ec9569e82a2daf4c6391ef860f06c71828bf20dde819f4aaa90355de18",
+          "amount": "1.0000000"
+        }
+      ]
+    },
+    {
+      "id": "reconciled",
+      "status": "complete",
+      "source": "GAK37Z6VFTD43KG6N5S36IQAQP3J4Z6ZJRQWVZSBWXGBA4EVOLRMYTZ6",
+      "destination": "GBC7YKCGT7D4KZCJRZ34OSXVD26GCG5NCMXFNUKSGMQ5ZNNLU2KQJ65T",
+      "session_id": "f17bcb971e4b89c9b2e70e869b64ca9d",
+      "attempts": 1,
+      "settlements": 1,
+      "received": "1.0000000",
+      "verdict": "One payment confirmed",
+      "events": [
+        {
+          "at": "2026-10-03T13:05:17.981566675Z",
+          "kind": "prepared",
+          "message": "Built one 1 XLM payment; retained its envelope and hash.",
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd"
+        },
+        {
+          "at": "2026-10-03T13:05:22.77028328Z",
+          "kind": "uncertain",
+          "message": "Submission returned HTTP 504. Outcome needs reconciliation.",
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd"
+        },
+        {
+          "at": "2026-10-03T13:05:22.794688858Z",
+          "kind": "lookup",
+          "message": "Lookup returned HTTP 404; original envelope remains the only payment intent.",
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd"
+        },
+        {
+          "at": "2026-10-03T13:05:24.059253478Z",
+          "kind": "lookup",
+          "message": "Lookup returned HTTP 404; original envelope remains the only payment intent.",
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd"
+        },
+        {
+          "at": "2026-10-03T13:05:25.373824555Z",
+          "kind": "recovered",
+          "message": "Found the original successful transaction. No fresh payment created.",
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd"
+        }
+      ],
+      "transactions": [
+        {
+          "hash": "77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd",
+          "confirmed": true,
+          "successful": true,
+          "ledger": 5001827,
+          "explorer": "https://stellar.expert/explorer/testnet/tx/77a28f5cf9fa2f95d63958f62d0743c2e3d6977dffbd496a947f1f2ea1cb97bd",
+          "amount": "1.0000000"
+        }
+      ]
+    }
+  ]
+}

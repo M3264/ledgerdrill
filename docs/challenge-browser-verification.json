@@ -1,0 +1,26 @@
+{
+  "base": "http://127.0.0.1:8099",
+  "errors": [],
+  "results": [
+    {
+      "choice": "retry",
+      "id": "2600014a3fb8c70fbe70d57531d40846",
+      "scenario": "before_submit",
+      "settlements": 1,
+      "ownerGuard": 403,
+      "duplicateGuard": 409,
+      "refreshRestored": true,
+      "historyReopened": true
+    },
+    {
+      "choice": "reconcile",
+      "id": "fde8996ff4faa8df0ec1ec7ca8772609",
+      "scenario": "before_submit",
+      "settlements": 1,
+      "ownerGuard": 403,
+      "duplicateGuard": 409,
+      "refreshRestored": true,
+      "historyReopened": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "frontend/src/app.css"
+        ],
+        "createdAt": "2026-10-03T12:24:55.665Z",
+        "reason": "Agent reviewed CSS: the 3px border belongs to unrounded navigation links and marks the active tab. Rounded scenario controls use a 1px border; this finding combines unrelated selectors on a minified line."
+      },
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "createdAt": "2026-10-03T12:24:55.721Z",
+        "reason": "Agent intentionally selected Space Grotesk for the diagnostic interface, paired with IBM Plex Mono for ledger evidence; the implemented typography is documented in DESIGN.md and reviewed in desktop and mobile screenshots."
+      }
+    ]
+  }
+}

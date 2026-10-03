@@ -1,0 +1,39 @@
+{
+  "uiRun": "ebb1e0ebf1d2cd4d3db0483709db0e76",
+  "uiExport": true,
+  "errorRecovery": true,
+  "reportsSurvivedRestart": true,
+  "errors": [],
+  "pages": [
+    {
+      "name": "desktop",
+      "view": "report",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "view": "history",
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "view": "integration",
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "view": "report",
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "view": "history",
+      "overflow": false
+    },
+    {
+      "name": "mobile",
+      "view": "integration",
+      "overflow": false
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "fde8996ff4faa8df0ec1ec7ca8772609",
+  "status": "complete",
+  "created_at": "2026-10-03T13:02:25.901884035Z",
+  "finished_at": "2026-10-03T13:02:42.700611364Z",
+  "deadline": "2026-10-03T13:04:32.340888398Z",
+  "choice": "reconcile",
+  "scenario": "before_submit",
+  "recipient": "Rowan",
+  "amount": "1.0000000",
+  "result": {
+    "id": "player",
+    "status": "complete",
+    "source": "GBTGDOTJHBHF2E4YGWGGGQSKDCR5ZNJH2HQSFJMRBSUDGORZIF7BUJ7U",
+    "destination": "GC3COE2N7QPRWV2AKSOYIWOPDRBYVXOR4ARUNLA7O22QLCHUDIZZNXWY",
+    "session_id": "b1e3f7062e10dce1c8508682320d6a6c",
+    "attempts": 2,
+    "settlements": 1,
+    "received": "1.0000000",
+    "verdict": "Rowan received one payment",
+    "events": [
+      {
+        "at": "2026-10-03T13:02:32.31451818Z",
+        "kind": "prepared",
+        "message": "Built one 1 XLM payout. Retained its original signed envelope and hash.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:32.332361182Z",
+        "kind": "uncertain",
+        "message": "The connection returned an error. The client cannot tell whether the payout settled.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:33.962793529Z",
+        "kind": "decision",
+        "message": "You chose to check the original transaction.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:34.088211743Z",
+        "kind": "lookup",
+        "message": "Lookup returned HTTP 404; original envelope remains the only payment intent.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:35.402820992Z",
+        "kind": "lookup",
+        "message": "Lookup returned HTTP 404; original envelope remains the only payment intent.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:36.723003595Z",
+        "kind": "lookup",
+        "message": "Lookup returned HTTP 404; original envelope remains the only payment intent.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:36.736448132Z",
+        "kind": "retry",
+        "message": "Resubmitting the exact original signed envelope is safe across retries.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      },
+      {
+        "at": "2026-10-03T13:02:42.569554005Z",
+        "kind": "recovered",
+        "message": "Original envelope confirmed on retry; no new payment created.",
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0",
+        "confirmed": true,
+        "successful": true,
+        "ledger": 5001795,
+        "explorer": "https://stellar.expert/explorer/testnet/tx/4b0e10d269cac65f15039088fde64199cceed8d3dfecca71cd0112c5921a20d0",
+        "amount": "1.0000000"
+      }
+    ]
+  }
+}
